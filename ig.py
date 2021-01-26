@@ -3,7 +3,7 @@ import instaloader
 L = instaloader.Instaloader()
 
 username = input("Please enter username: ")
-password = input("please enter password: ")
+password = input("Please enter password: ")
 
 L.login(username, password)
 
