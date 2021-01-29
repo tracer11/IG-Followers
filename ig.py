@@ -5,21 +5,24 @@ L = instaloader.Instaloader()
 username = input("Please enter username: ")
 password = input("Please enter password: ")
 
-L.login(username, password)
+def check_followers(username, password):
+  
+  L.login(username, password)
 
-profile = instaloader.Profile.from_username(L.context, username)
+  profile = instaloader.Profile.from_username(L.context, username)
 
-followers = []
-following = []
+  followers = []
+  following = []
 
-for follower in profile.get_followers():
-  followers.append(follower)
+  for follower in profile.get_followers():
+    followers.append(follower)
 
-for f in profile.get_followees():
-  following.append(f)
+  for f in profile.get_followees():
+    following.append(f)
 
 
-for f in following:
-  if f not in followers:
-    print(f)
+  for f in following:
+    if f not in followers:
+      print(f)
 
+check_followers(username,password)
