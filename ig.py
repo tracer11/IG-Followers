@@ -14,6 +14,8 @@ def check_followers(username, password):
   followers = []
   following = []
 
+  print("Loading.....")
+
   for follower in profile.get_followers():
     followers.append(follower)
 
